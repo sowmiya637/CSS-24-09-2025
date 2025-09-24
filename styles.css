@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #fef6f9;
+  color: #3b3b3b;
+  line-height: 1.6;
+  padding: 1.5rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+header h1 {
+  font-family: "Playfair Display", serif;
+  color: #D16BA5;
+  font-size: 2.5rem;
+}
+header p {
+  font-size: 1.1rem;
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.card h2 {
+  font-size: 1.4rem;
+  color: #D16BA5;
+  margin-bottom: 0.5rem;
+}
+.card p {
+  color: #777;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/*# sourceMappingURL=styles.css.map */

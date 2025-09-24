@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Responsive Site</title>
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background: #cee460;
+      color: rgb(175, 42, 55);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #333;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0.5rem 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+      color: brown;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /*automatically create or remove columns depending on the container’s width. */
+      gap: 1.5rem;
+    }
+
+    .card {
+      background:  #cee460;;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      color: brown;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    /* Responsive nav for small screens */
+    @media (max-width: 200px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Responsive Website</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="grid">
+      <div class="card">
+        <h2>Card One</h2>
+        <p>This is a simple card example with responsive layout.</p>
+      </div>
+      <div class="card">
+        <h2>Card Two</h2>
+        <p>Resize the browser window to see the grid adjust.</p>
+      </div>
+      <div class="card">
+        <h2>Card Three</h2>
+        <p>Cards stack nicely on smaller screens.</p>
+      </div>
+      <div class="card">
+        <h2>Card Four</h2>
+        <p>Hover over cards for a zoom and shadow effect.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 My Responsive Website</p>
+  </footer>
+</body>
+</html>
